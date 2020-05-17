@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http.Headers;
 
 namespace PreworkCodeChallenges
 {
@@ -77,6 +78,50 @@ namespace PreworkCodeChallenges
                 Console.WriteLine("That is a leap year.");
             }
 
+        }
+
+        private static void CorrectSequence(int[] array)
+        {
+            if (SumOfArray(array) == ProductOfArray(array))
+            {
+                Console.WriteLine("Yes");
+            }
+            else if (SumOfArray(array) != ProductOfArray(array))
+            {
+                Console.WriteLine("No");
+            }
+            else
+            {
+                foreach (var number in array)
+                {
+                    if (number < 0 )
+                    {
+                        Console.WriteLine("No");
+                    }
+                }
+            }
+        }
+
+        private static int SumOfArray(int[] array)
+        {
+            int total = 0;
+
+            foreach (var number in array)
+            {
+                total = total + number;
+            }
+            return total;
+        }
+
+        private static int ProductOfArray(int[] array)
+        {
+            int total = 1;
+
+            foreach (var number in array)
+            {
+                total = total * number;
+            }
+            return total;
         }
     }
 }
