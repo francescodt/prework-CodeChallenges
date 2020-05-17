@@ -51,31 +51,30 @@ namespace PreworkCodeChallenges
 
         public static void LeapYear()
         {
-            string answer = "";
-            Console.WriteLine("Enter a year to see if it was a leap year: ");
-            int yearTest = Int32.Parse(Console.ReadLine());
-            if (yearTest % 4 == 0)
+            Console.WriteLine("Enter a year to see if it was a leap year.");
+            int userYear = int.Parse(Console.ReadLine());
+
+            if (userYear % 4 == 0)
             {
-                if (yearTest % 100 = 0)
+                if (userYear % 100 == 0)
                 {
-                    if (yearTest % 400 == 0)
+                    if (userYear % 400 == 0)
                     {
-                        answer = $"Yes, {yearTest} was infact a leap year.";
+                        Console.WriteLine("That is indeed a leap year.");
                     }
                     else
                     {
-                        answer = $"Negative, {yearTest} was not infact a leap year.";
+                        Console.WriteLine("That is not a leap year.");
                     }
-                else
-                    {
-                        answer = $"Yes, {yearTest} was infact a leap year.";
-                    }
-            else
-                    {
-                        answer = $"Yes, {yearTest} was infact a leap year.";
-                    }
-                    Console.WriteLine(answer);
                 }
+                else
+                {
+                    Console.WriteLine("That is a leap year.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("That is a leap year.");
             }
 
         }
